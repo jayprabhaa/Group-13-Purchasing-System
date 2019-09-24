@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_protect
 from django.http import HttpRequest, HttpResponseRedirect
 from django.template import RequestContext
-from django.db import models 
+from django.db import models
 from datetime import datetime
 from app.models import Person,Item,Vendor
 from Quotation.models import Quotation,QuotationItem
