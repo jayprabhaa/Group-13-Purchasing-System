@@ -50,7 +50,8 @@ def fillingrequestforquotation(request):
                 'request_for_quotation_id': 'RFQ' + str(rfq_id),
                 'purchase_requisition_id': pr_id, 
                 'staff_id' : staff_info.person_id,
-                'rows':item_list
+                'rows':item_list,
+                'vendor_id': Vendor.objects.all().order_by('vendor_id')
             }
 
         return render(request,'RequestForQuotation/requestforquotationform.html',context)
