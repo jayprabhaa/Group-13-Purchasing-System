@@ -29,7 +29,16 @@
                 <textarea type="text" class="poform-control" name="staff_id" placeholder="Staff ID">{{staff_id}}</textarea>
             </div>
             <div class="col">
-                <input type="text" class="form-control" name="vendor_id" placeholder="Vendor ID">
+                <label class="labelpodetails">Vendor ID</label> 
+                              
+                <select name="vendor_id" class="form-control"> 
+                  <option value="" selected>None</option> 
+                  {% for entry in vendor_id %} 
+                  <option value="{{ entry.vendor_id }}">{{ entry.vendor_id }} {{ entry.vendor_name }}</option> 
+                  {% endfor %} 
+                </select> 
+  
+                
             </div>
         </div>
 
